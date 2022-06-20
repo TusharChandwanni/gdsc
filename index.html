@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+      <link rel = "stylesheet" href="p.css" >
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7eb5897a7f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="check">
+
+        <div class="main">
+            <h1>Checkout</h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3>Contact information</h3>
+            <form>
+                <label for="">Email</label>
+                <br />
+                <div class="q">
+                  <br />
+
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" name="your email" placeholder="Enter your email..."><br>
+                </div>
+
+                <label>Phone</label><br>
+
+                <div class="q">
+                  <br />
+                  <i class="fa-solid fa-phone"></i>
+                <input type="number" name="your number" placeholder="Enter your phone..."><br>
+              </div>
+
+            </form>
+            <br><br>
+            <h3>Shipping Address</h3>
+            <form>
+                <label>Full name</label>
+                <div class="q">
+                  <br />
+
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="your name" placeholder="Rodeney cotton"><br>
+              </div>
+              <br />
+                <label>Address</label>
+
+                <div class="q">
+                  <br />
+                <i class="fa-solid fa-house"></i>
+                <input type="text" name="your address" placeholder="Your address..."><br>
+              </div>
+              <br />
+
+                <label>City</label>
+                <div class="q">
+                  <br />
+                <i class="fa-solid fa-city"></i>
+                <input type="text" name="your city" placeholder="Your city..."><br>
+              </div>
+                <br />
+                <div class="inner">
+                    <table>
+                        <tr>
+                            <td><label for="">Country</label></td>
+                            <td> <label>Postal code</label></td>
+                        </tr>
+                        <tr>
+                        <td><div class="qq">
+
+                            <i class="fa-solid fa-earth-asia" ></i>
+                            <input type="text" name="your country" placeholder="Your country..">
+                          </div></td>
+                          <td><div class="qq">
+
+                          <i class="fa fa-map-pin" aria-hidden="true"></i>
+                            <input type="number" name="your postal code" placeholder="Your postal code">
+                          </div></td>
+                        </tr>
+                    </table>
+                    <br />
+
+                    <input type="checkbox" name="save information" id="save">
+                    <span>Save this information for next time</span>
+                    <br />
+                    <br />
+                    <div style = "position:relative; left:250px; top:2px;">
+                    <button>Continue</button>
+                    </div>
+
+                </div>
+                <br>
+            </form>
+        </div>
+        <div class="right">
+            <div class="change">
+                <div>
+                    <span><img src="bag.jpg" width="175.7px" height="135.91px"> </span>
+                </div>
+                <div class="do">
+                    <p>Vintage Backbag</p>
+                    <span><span style="color: coral;">$54.99 </span> <span class="mon">$94.99</span></span>
+
+
+
+                    <div class="btn">
+                      <button  class="minusbtn">-</button>
+                      <button  class="numbtn">ADD TO CART</button>
+                      <button  class="plusbtn">+</button>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="change">
+                <div>
+                    <img src="s.jpg" width="175.7px" height="135.91px">
+                </div>
+                <div class="do">
+                    <p>Levi Shoes</p>
+                    <span><span style="color: coral;">$74.99 </span> <span class="mon">$124.99</span>
+
+
+
+                    <div class="btn">
+                      <button  class="minusbtn1">-</button>
+                      <button  class="numbtn1">ADD TO CART</button>
+                      <button  class="plusbtn1">+</button>
+
+
+
+                    </div>
+                </div>
+                </div>
+
+            <div class="table">
+                <table>
+                    <tr>
+                        <td class="ship">Shipping</td>
+                        <td class="ship">$19</td>
+                    </tr>
+                    <tr>
+                        <td class="ship">Total</td>
+                        <td class="ship">$148.98</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script>
+  let btn=document.querySelector('.numbtn');
+  let mbtn=document.querySelector('.minusbtn');
+  let pbtn=document.querySelector('.plusbtn');
+
+  btn.addEventListener("click",()=>{
+    if (btn.innerText=='ADD TO CART')
+    {
+      btn.innerText=1;
+      pbtn.style.display='inline-block';
+      mbtn.style.display='inline-block';
+
+
+    }
+  })
+
+  mbtn.addEventListener("click",()=>{
+
+
+      if(btn.innerText<2){
+        btn.innerText='ADD TO CART';
+        pbtn.style.display='none';
+        mbtn.style.display='none';}
+        else {
+            btn.innerText=btn.innerText - 1;
+        }
+
+
+
+
+  })
+  pbtn.addEventListener("click",()=>{
+
+    btn.innerText =+(btn.innerText) + +1 ;
+      if(btn.innerText<2){
+        btn.innerText='ADD TO CART';
+      }
+
+
+
+
+
+  })
+  let btn1=document.querySelector('.numbtn1');
+  let mbtn1=document.querySelector('.minusbtn1');
+  let pbtn1=document.querySelector('.plusbtn1');
+
+  btn1.addEventListener("click",()=>{
+    if (btn1.innerText=='ADD TO CART')
+    {
+      btn1.innerText=1;
+      pbtn1.style.display='inline-block';
+      mbtn1.style.display='inline-block';
+
+
+    }
+  })
+
+  mbtn1.addEventListener("click",()=>{
+
+
+      if(btn1.innerText<2){
+        btn1.innerText='ADD TO CART';
+        pbtn1.style.display='none';
+        mbtn1.style.display='none';}
+        else {
+            btn1.innerText=btn1.innerText - 1;
+        }
+
+
+
+
+  })
+  pbtn1.addEventListener("click",()=>{
+
+    btn1.innerText =+(btn1.innerText) + +1 ;
+      if(btn1.innerText<2){
+        btn1.innerText='ADD TO CART';
+      }
+
+
+
+
+
+  })
+</script>
+
+</body>
+
+</html>
